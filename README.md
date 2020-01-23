@@ -1,7 +1,7 @@
 # HandlingConceptDrift
 Strategies to detect and handle incremental concept drift in time series data
 
-Based on the dataset of TLC in which different types of drift can be detected different strategies are provided how to handle incremental drift.
+Based on the dataset of TLC in which various types of drift can be detected, different strategies are provided how to handle incremental drift.
 
 
 ## Definition of concept drift
