@@ -1,7 +1,7 @@
 # HandlingConceptDrift
 Strategies to detect and handle incremental concept drift in time series data
 
-Based on the dataset of TLC in which various types of drift can be detected, different strategies are provided how to handle incremental drift.
+Based on the dataset of NYC Taxi and Limousine Commission (TLC) (https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) in which various types of drift can be detected, different strategies are provided how to handle incremental drift.
 
 
 ## Definition of concept drift
