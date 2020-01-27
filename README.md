@@ -65,10 +65,23 @@ In this work various drift detectors are applied:
 
 *To adjust the MK test in a drift detection context, a process was implemented as follows: After a minimum number of w observations are streamed, the MK test is performed. Two cases are distinguished: i) If a monotonic trend is detected, a drift is signaled and the MK test is reset, so that it can be applied on the next batch of w observations. ii) If no drift is detected, additional n instances are streamed and the MK test is performed again on the w+n observations.
 
-## References
 
+## Results
+
+Different experiments with variations of the adaptation strategies show that all proposed strategies significantly improve the forecasting performance of the respective models compared to a static model without any adaptation in terms of the RMSE & sMAPE metric. Thus, they seem to be better suited to address incremental drift. While model adaptations performed periodically already significantly improve the forecasting accuracy over time, the best results are obtained by performing adaptations when drift is explicitly detected. 
+
+## References
+Bifet, Albert / Gavaldà, Ricard (2007), Learning from Time-Changing Data with Adaptive Windowing, Apte, Chid / Skillicorn, David / Liu, Bing / Parthasarathy, Srinivasan (Eds.), Proceedings of the Seventh SIAM International Conference on Data Mining, pp.443-448. 
+
+Ditzler, Gregory / Polikar, Robi (2011), Hellinger distance based drift detection for nonstationary environments, IEEE 2011 Symposium on Computational Intelligence in Dynamic and Uncertain Environments (CIDUE), pp.41-48.
 
 Gama, João / Žliobaité, Indré / Bifet, Albert / Pechenizkiy, Mykola / Bouchachia, Abdelhamid (2014), A survey on concept drift adaptation, ACM Computing Survey (CSUR), Vol. 46, Issue 4, Article 44, 37 pages.
+
+Kendall, M.G. (1975), Rank Correlation Methods, 4th Edition, Charles Grifﬁn, London.
+
+Mann, Henry B. (1945), Nonparametric Tests Against Trend, Econometrica, Vol. 13, No. 3, pp.245-259. 
+
+Nishida, Kyosuke / Yamauchi, Koichiro (2007), Detecting concept drift using statistical testing, Corruble, Vincent / Takeda, Masayuki / Suzuki, Einoshin (Eds.), Proceedings of the 10th International Conference on Discovery Science, Vol. 4755 of DS '07, Springer-Verlag, Berlin, Heidelberg, 2007, pp.264-269. 
 
 Tsymbal, Alexey (2004), The Problem of Concept Drift: Deﬁnitions and Related Work, (Technical Report TCD-CS-2004-15), Department of Computer Science, Trinity College, Dublin, 7 pages.
 
