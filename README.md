@@ -52,6 +52,19 @@ In this work, a time frame τ is specified for how long the model is incremental
 
 ![Switching Scheme Approach](https://github.com/vincekellner/HandlingConceptDrift/blob/master/Switching%20Scheme.png)
 
+The figure illustrates the concept of the “Switching Scheme”: First, the initial training of the model is performed. Afterwards the model starts to make forecasts. If a drift is detected at 𝑡 < 𝜏 the model is incrementally updated based on the observations in 𝝀. If a drift is detected at 𝑡 > 𝜏 a new model is trained to replace the existing model and 𝜏 is reset. This procedure is repeated until all forecasts are obtained. 
+
+
+## Drift Detectors 
+In this work various drift detectors are applied:
+
+- The statistical test of equal proportions (STEPD) proposed by Nishida and Yamauchi (2007) 
+- Hellinger distance drift detection method (HDDDM) algorithm proposed by Ditzler and Polikar (2011) 
+- Adaptive Windowing (ADWIN) proposed by Bifet and Gavaldà (2007) 
+- Mann-Kendall test (Kendall 1975; Mann 1945) ("MK")*
+
+*To adjust the MK test in a drift detection context, a process was implemented as follows: After a minimum number of w observations are streamed, the MK test is performed. Two cases are distinguished: i) If a monotonic trend is detected, a drift is signaled and the MK test is reset, so that it can be applied on the next batch of w observations. ii) If no drift is detected, additional n instances are streamed and the MK test is performed again on the w+n observations.
+
 ## References
 
 
