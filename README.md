@@ -7,11 +7,12 @@ Based on the dataset of NYC Taxi and Limousine Commission (TLC) (https://www1.ny
 
 Concepts in the real world are often not stable and might change over time. Especially in nonstationary dynamic environments the underlying distribution of data can change over time. This effect is referred to as concept drift in literature (Widmer and Kubat 1996) and makes the creation of a model only based on past data challenging since the model is inconsistent with new data (Tsymbal 2004, p.1).  
 Formally concept drift is defined as follows: 
+
 ∃𝑋:𝑝𝑡0(𝑋,𝑦) ≠ 𝑝𝑡1(𝑋,𝑦) 
 
 The joint distribution between the input X and target y, denoted by 𝑝𝑡0 at time t0, differs from the distribution at t1. Changes might occur in different ways: 
- Prior probabilities of the target 𝑝(𝑦) may change. 
- Conditional probabilities 𝑝(𝑋|𝑦) may change. 
+- Prior probabilities of the target 𝑝(𝑦) may change. 
+- Conditional probabilities 𝑝(𝑋|𝑦) may change. 
 (Gama et al. 2014, pp.4; Žliobaité 2010, pp.3)
 
 Gama et al. (2014) define different forms, the data distribution can change over time: Drift may happen abruptly such that the data switched suddenly to another concept, incrementally where slightly different concepts change slowly, or gradually where two concepts are active and keep switching back and forth for some time while the probability to obtain data from the first concept decreases. Concepts might also reoccur after some time. Reoccurring concepts differ from periodic seasonality since they happen without certainty (Gama et al. 2014, pp.11). 
