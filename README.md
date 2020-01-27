@@ -50,7 +50,7 @@ The triggered adaptation strategies refer to the idea to initiate a model update
 The idea behind this novel adaptation scheme is to take advantage of the individual benefits of a complete retraining and an incremental updating strategy. The initial model is kept and is incrementally updated with the most recent observations as long as possible. If the model seems to be outdated or does not adapt fast enough to a new concept, a new model is trained and the old model is discarded. 
 In this work, a time frame τ is specified for how long the model is incrementally updated if drift is detected before a new model is trained. After a retraining, the new model is incrementally updated if drift is detected until the next τ is reached.
 
-![alt text](http://url/to/img.png)
+![Switching Scheme Approach](https://github.com/vincekellner/HandlingConceptDrift/blob/master/Switching%20Scheme.png)
 
 ## References
 
